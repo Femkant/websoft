@@ -1,0 +1,6 @@
+This is my reflection on lecture one and creating github pages. The whole concept "github pages" was new to me. Otherwise I have 
+been using github for all my projects since the first year at HKR.
+I have created a website before. In the last project course I was in the website group. We used Vue.js to create it. In the 
+examnination course I will be working in Angular.
+Today I learned about github pages. Im looking forward to learn vanilla javascript since all I've been using before has been 
+typescript.
