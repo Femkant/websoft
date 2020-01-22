@@ -2,23 +2,53 @@
 
 <head>
     <style>
-        p {
-            padding: 30px;
+        #bg {
+            background-image: url(work/report/img/bg.jpg);
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 15px;
         }
 
-        .about {
-            font-size: 30px;
+        .btn {
+            /* background styles */
+            position: relative;
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: green;
+            /*for compatibility with older browsers*/
+            background-image: linear-gradient(green, lightgreen);
+            border-radius: 3px;
+            box-shadow: 0px 1px 4px -2px #333;
+            text-shadow: 0px -1px #333;
+
+            /* text styles */
+            text-decoration: none;
+            color: #fff;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: 100;
         }
 
-        .background {
-            background-color: rgb(50, 200, 205);
+        .btn:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 4px);
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+        }
+
+        .btn:hover {
+            background: linear-gradient(#073, #0fa);
         }
     </style>
 </head>
 
-<body class="background">
-    <p class="about">
-        <a href="work/report/me.html">Visit Oskar's page</a>
+<body id="bg">
+    <p style="text-align: center; padding-top: 120px;">
+        <button class="btn" onclick="location.href='work/report/me.html'">Visit Oskar's Page</button>
     </p c>
 </body>
 
