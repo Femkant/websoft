@@ -2,21 +2,119 @@
 <html lang="en">
 
 <head>
+    <style>
+        #bg {
+            background-image: url(img/bg.jpg);
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 15px;
+        }
+
+        .button-bar {
+            background-color: teal;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .buttons {
+            /* background styles */
+            min-width: 100px;
+            position: relative;
+            display: inline-block;
+            padding: 5px;
+            background-color: green;
+            /*for compatibility with older browsers*/
+            background-image: linear-gradient(green, lightgreen);
+            border-radius: 3px;
+            box-shadow: 0px 1px 4px -2px #333;
+            text-shadow: 0px -1px #333;
+
+            /* text styles */
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        .buttons:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 4px);
+            height: 50%;
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+        }
+
+        .buttons:hover {
+            background: linear-gradient(#073, #0fa);
+        }
+
+        input[id^="spoiler"] {
+            display: none;
+        }
+
+        input[id^="spoiler"]+label {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 5px 20px;
+            background: rgb(99, 204, 155);
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all .6s;
+        }
+
+        input[id^="spoiler"]:checked+label {
+            color: #333;
+            background: #ccc;
+        }
+
+        input[id^="spoiler"]~.spoiler {
+            width: 90%;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin: 10px auto 0;
+            padding: 10px;
+            background: #eee;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: all .6s;
+        }
+
+        input[id^="spoiler"]:checked+label+.spoiler {
+            height: auto;
+            opacity: 1;
+            padding: 10px;
+        }
+    </style>
     <meta charset="utf-8">
     <title>Report from the course sections</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
 </head>
 
-<body>
+<body id="bg">
 
 
 
     <header>
-        <nav>
+        <nav class="button-bar">
+            <button class="buttons" onclick="location.href='me.html'">Me</button>
+            <button class="buttons" onClick="location.href='report.html'">Report</button>
+            <button class="buttons" onclick="location.href='about.html'">About</button>
+
+            <!--
             <a href="me.html">Me</a> |
             <a href="report.html">Report</a> |
             <a href="about.html">About</a>
+            -->
         </nav>
     </header>
 
@@ -29,64 +127,97 @@
         </header>
 
         <section>
-            <h2>S01</h2>
-            <p>This is my reflection on lecture one and creating github pages. The whole concept "github pages" was new
-                to me.
-                Otherwise I have
-                been using github for all my projects since the first year at HKR.
-                I have created a website before. In the last project course I was in the website group. We used Vue.js
-                to create it.
-                In the
-                examnination course I will be working in Angular.
-                Today I learned about github pages. Im looking forward to learn vanilla javascript since all I've been
-                using before
-                has been
-                typescript.</p>
+            <input type="checkbox" id="spoiler1" />
+            <label for="spoiler1">S01</label>
+            <div class="spoiler">
+                <p>This is my reflection on lecture one and creating github pages. The whole concept "github pages" was
+                    new
+                    to me.
+                    Otherwise I have
+                    been using github for all my projects since the first year at HKR.
+                    I have created a website before. In the last project course I was in the website group. We used
+                    Vue.js
+                    to create it.
+                    In the
+                    examnination course I will be working in Angular.
+                    Today I learned about github pages. Im looking forward to learn vanilla javascript since all I've
+                    been
+                    using before
+                    has been
+                    typescript.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S02</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler2" />
+            <label for="spoiler2">S02</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S03</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler3" />
+            <label for="spoiler3">S03</label>
+            <div class="spoiler">
+                <p>Here is the text for this section. bla bla</p>
+            </div>
         </section>
 
         <section>
-            <h2>S04</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler4" />
+            <label for="spoiler4">S04</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S05</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler5" />
+            <label for="spoiler5">S05</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S06</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler6" />
+            <label for="spoiler6">S06</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S07</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler7" />
+            <label for="spoiler7">S07</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S08</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler8" />
+            <label for="spoiler8">S08</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S09</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler9" />
+            <label for="spoiler9">S09</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <section>
-            <h2>S10</h2>
-            <p>Here is the text for this section.</p>
+            <input type="checkbox" id="spoiler10" />
+            <label for="spoiler10">S10</label>
+            <div class="spoiler">
+                <p>Here is the text for this section.</p>
+            </div>
         </section>
 
         <footer>
