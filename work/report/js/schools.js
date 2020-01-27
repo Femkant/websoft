@@ -12,7 +12,7 @@
 
     console.log('JSON fetched');
 
-    updateTable(tableId, jsonData);
+    updateTable('placeHolder', response.json);
     
 };
 
