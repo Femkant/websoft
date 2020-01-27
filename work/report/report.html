@@ -2,55 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        #bg {
-            background-image: url(img/bg.jpg);
-
-            background-size: cover;
-            background-repeat: no-repeat;
-            padding: 15px;
-        }
-
-        .button-bar {
-            background-color: teal;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .buttons {
-            /* background styles */
-            min-width: 100px;
-            position: relative;
-            display: inline-block;
-            padding: 5px;
-            background-color: green;
-            /*for compatibility with older browsers*/
-            background-image: linear-gradient(green, lightgreen);
-            border-radius: 3px;
-            box-shadow: 0px 1px 4px -2px #333;
-            text-shadow: 0px -1px #333;
-
-            /* text styles */
-            text-decoration: none;
-            color: #fff;
-            font-size: 20px;
-            font-family: sans-serif;
-            font-weight: 100;
-        }
-
-        .buttons:after {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: calc(100% - 4px);
-            height: 50%;
-            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-        }
-
-        .buttons:hover {
-            background: linear-gradient(#073, #0fa);
-        }
 
         input[id^="spoiler"] {
             display: none;
@@ -101,24 +54,20 @@
 </head>
 
 <body id="bg">
-
-
-
     <header>
         <nav class="button-bar">
             <button class="buttons" onclick="location.href='me.html'">Me</button>
             <button class="buttons" onClick="location.href='report.html'">Report</button>
             <button class="buttons" onclick="location.href='about.html'">About</button>
-
-            <!--
-            <a href="me.html">Me</a> |
-            <a href="report.html">Report</a> |
-            <a href="about.html">About</a>
-            -->
+            <div style="margin-top: 10px;"></div>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 3</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 4</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 5</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 6</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 7</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 8</button>
         </nav>
     </header>
-
-
 
     <article>
 

@@ -1,4 +1,4 @@
-(function () {
+ function runFetch () {
     'use strict';
 
     //    fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/1081')
@@ -10,5 +10,5 @@
             console.log(myJson);
         });
 
-    console.log('Sandbox MEGA is ready!');
-})();
+    console.log('JSON fetched');
+};

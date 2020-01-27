@@ -5,11 +5,25 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body style="text-align: center;">
-    <h1>Schools!</h1>
+<body id="bg" style="text-align: center;">
 
-    <button onclick="" class="buttons">Click me</button>
+    <header>
+        <nav class="button-bar">
+            <button class="buttons" onclick="location.href='me.html'">Me</button>
+            <button class="buttons" onClick="location.href='report.html'">Report</button>
+            <button class="buttons" onclick="location.href='about.html'">About</button>
+            <div style="margin-top: 10px;"></div>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 3</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 4</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 5</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 6</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 7</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 8</button>
 
+        </nav>
+    </header>
+
+    <button onclick="runFetch()" class="buttons" style="margin-top:100px; width: 100px; height: 60px;">Click me</button>
 
     <script src="js/schools.js"></script>
 </body>

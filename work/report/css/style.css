@@ -11,6 +11,18 @@ body {
     width: 700px;
 }
 
+#bg {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px;
+}
+.button-bar {
+    background-color: teal;
+    padding: 10px;
+    text-align: center;
+}
+
 .duck {
     background-image: url("../img/duck.jpeg");
     background-size: 64px;
@@ -36,7 +48,7 @@ body {
 
     /* text styles */
     text-decoration: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 100;
@@ -53,5 +65,39 @@ body {
 }
 
 .buttons:hover {
+    background: linear-gradient(#073, #0fa);
+}
+
+.buttons2 {
+    /* background styles */
+    min-width: 50px;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    background-color: green;
+    /*for compatibility with older browsers*/
+    background-image: linear-gradient(green, lightgreen);
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
+
+    /* text styles */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.buttons2:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+}
+
+.buttons2:hover {
     background: linear-gradient(#073, #0fa);
 }
