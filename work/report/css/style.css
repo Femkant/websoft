@@ -9,13 +9,15 @@ body {
     margin: 8px auto;
     background: #fff;
     width: 700px;
+
 }
 
 #bg {
     background-image: url(../img/bg.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    
     padding: 15px;
+    
 }
 .button-bar {
     background-color: teal;
@@ -100,4 +102,9 @@ body {
 
 .buttons2:hover {
     background: linear-gradient(#073, #0fa);
+}
+
+.placeHolder {
+    min-width: 500px;
+    min-height: 500px;
 }
