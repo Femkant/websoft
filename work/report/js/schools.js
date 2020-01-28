@@ -9,7 +9,7 @@
         var obj = JSON.parse(data);
 
         var data2 = obj.Skolenheter;
-
+        
         var col = [];
         for (var i = 0; i < data2.length; i++) {
             for (var key in data2[i]) {

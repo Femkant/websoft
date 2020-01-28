@@ -1,0 +1,69 @@
+
+
+#flagContainer {
+margin-top: 10px;
+margin-bottom: 100px;
+height:  500px;
+border: 1px solid black;
+transform: skew(10deg);
+
+}
+
+.linkContainer {
+    margin-top: 20px;
+}
+
+.c1 {
+    margin-right: 40px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.c2 {
+    margin-right: 40px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.c3 {
+    margin-right: 40px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.france {
+	background: -webkit-linear-gradient(left, blue 33%, white 33%, white 66%, red 66%);
+
+}
+
+.italy {
+    background: -webkit-linear-gradient(left, green 33%, white 33%, white 66%, red 66%);
+}
+
+.germany {
+    background: -webkit-linear-gradient(top, black 33%, red 33%, red 66%, yellow 66%);
+}
+
+
+.flag {
+    background: blue;
+
+    position: relative;
+  }
+  .flag:before, .flag:after {
+    position: absolute;
+    background: yellow;
+    content: "";
+  }
+  .flag:before {
+    width: 100%;
+    height: 40px;
+    top: 40%;
+    left: 0;
+  }
+  .flag:after {
+    width: 40px;
+    height: 100%;
+    top: 0;
+    left: 40%;
+  }

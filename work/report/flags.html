@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/flags.css" />
+    <style>
+        th, td, p, input {
+            font:12px Verdana;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+            
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body id="bg" >
+
+<div style="text-align: center;">
+    <header>
+        <nav class="button-bar">
+            <button class="buttons" onclick="location.href='me.html'">Me</button>
+            <button class="buttons" onClick="location.href='report.html'">Report</button>
+            <button class="buttons" onclick="location.href='about.html'">About</button>
+            <div style="margin-top: 10px;"></div>
+            <button class="buttons2" onclick="location.href='schools.html'">Schools</button>
+            <button class="buttons2" onclick="location.href='flags.html'">Flags</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 5</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 6</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 7</button>
+            <button class="buttons2" onclick="location.href='schools.html'">Task 8</button>
+        </nav>
+
+        <div class="duckBtnPos">
+            <button id="duckBtn" onclick="switchDuckState()" class="buttons2" style="height: 25px; font-size: 13px;">Stop duck!</button>
+        
+        <div class="score">    
+            <div id="score">Ducks shot: 0</div>
+        </div>
+    </div>
+    </header>
+    <div id="duck" class="duck"></div>
+
+    <div class="linkContainer">
+        <button onclick="toggleFrance()" class="c1">France</button>
+        <button onclick="toggleItaly()" class="c2">Italy</button onclick="toggleFrance">
+        <button onclick="toggleGermany()" class="c3">Germany</button onclick="toggleFrance">
+    </div>
+    <div class="flag" id="flagContainer"></div>
+        
+
+    <footer>
+        <hr>
+        <p>Oskar Karström, software developer.</p>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/duck.js"></script>
+    <script type="text/javascript" src="js/flags.js"></script>
+</div id="bg" style="text-align: center;">
+</body>
+
+</html>
