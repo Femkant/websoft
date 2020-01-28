@@ -53,20 +53,30 @@
     <link rel="icon" href="favicon.ico">
 </head>
 
-<body id="bg">
-    <header>
-        <nav class="button-bar">
-            <button class="buttons" onclick="location.href='me.html'">Me</button>
-            <button class="buttons" onClick="location.href='report.html'">Report</button>
-            <button class="buttons" onclick="location.href='about.html'">About</button>
-            <div style="margin-top: 10px;"></div>
-            <button class="buttons2" onclick="location.href='schools.html'">Task 3</button>
-            <button class="buttons2" onclick="location.href='schools.html'">Task 4</button>
-            <button class="buttons2" onclick="location.href='schools.html'">Task 5</button>
-            <button class="buttons2" onclick="location.href='schools.html'">Task 6</button>
-            <button class="buttons2" onclick="location.href='schools.html'">Task 7</button>
-            <button class="buttons2" onclick="location.href='schools.html'">Task 8</button>
-        </nav>
+<body id="bg" >
+
+    <div style="text-align: center;">
+        <header>
+            <nav class="button-bar">
+                <button class="buttons" onclick="location.href='me.html'">Me</button>
+                <button class="buttons" onClick="location.href='report.html'">Report</button>
+                <button class="buttons" onclick="location.href='about.html'">About</button>
+                <div style="margin-top: 10px;"></div>
+                <button class="buttons2" onclick="location.href='schools.html'">Task 3</button>
+                <button class="buttons2" onclick="location.href='schools.html'">Task 4</button>
+                <button class="buttons2" onclick="location.href='schools.html'">Task 5</button>
+                <button class="buttons2" onclick="location.href='schools.html'">Task 6</button>
+                <button class="buttons2" onclick="location.href='schools.html'">Task 7</button>
+                <button class="buttons2" onclick="location.href='schools.html'">Task 8</button>
+            </nav>
+    
+            <div class="duckBtnPos">
+                <button id="duckBtn" class="buttons2" style="height: 25px; font-size: 13px;">Stop duck!</button>
+            
+            <div class="score">    
+                <div id="score">Ducks shot: 0</div>
+            </div>
+        </div>
     </header>
 
     <article>
@@ -207,6 +217,8 @@
             </div>
         </section>
 
+        <div id="duck" class="duck"></div>
+
         <footer>
             <hr>
             <p>Oskar Karström, software developer.</p>
@@ -215,7 +227,7 @@
     </article>
 
 
-
+    <script type="text/javascript" src="js/duck.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
