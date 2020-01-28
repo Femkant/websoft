@@ -1,9 +1,11 @@
 "use strict";
 
 var element = document.getElementById("duck");
-var counter = 0;
 var duckState = true;
-
+var counter = 0;
+counter = JSON.parse(localStorage.getItem('counter'));
+var score = document.getElementById("score");
+score.textContent = "Ducks shot: " + counter;
 
 (function () {
     element.style.position = 'absolute';
@@ -13,7 +15,9 @@ var duckState = true;
     window.setInterval(switchPos, 2000);
 
     element.addEventListener("click", function () {
-        counter = counter+1;
+        counter = JSON.parse(localStorage.getItem('counter')) + 1;
+        
+        localStorage.setItem('counter', JSON.stringify(counter))
         element.style.position = 'absolute';
         element.style.top = Math.floor(Math.random()*90+5)+'%';
         element.style.left = Math.floor(Math.random()*90+5)+'%';
@@ -35,6 +39,7 @@ function switchPos() {
     element.style.position = 'absolute';
     element.style.top = Math.floor(Math.random()*90+5)+'%';
     element.style.left = Math.floor(Math.random()*90+5)+'%';
+
 }
 
 function switchDuckState() {
