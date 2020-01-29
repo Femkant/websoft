@@ -1,13 +1,62 @@
-function runFetchMunicipality () {
+
+        var data2 = [];
+        var divContainer = document.getElementById("placeHolder");
+        var select = document.getElementById("municipality");
+        var warningMsg = document.getElementById("warningMsg");
+            warningMsg.style.color = 'transparent';
+
+(function runFetchMunicipality () {
     'use strict';
 
         fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun')
+        
     //fetch('data/kommun.json')
     .then(response => response.text()) 
     .then(data => { 
 
         var obj = JSON.parse(data);
-console.log(data);
+        data2 = obj.Kommuner;
+
+        var municipality = document.getElementById("municipality");
+
+        for (var j = 0; j < data2.length; j++){
+            municipality.innerHTML = municipality.innerHTML + '<option>' + data2[j].Namn + '</option>';
+            //console.log(data2[j].Namn)
+        }
+    })
+})();
+
+
+
+function fetchData() {
+    var s = document.getElementById("municipality", [0]);
+    var text = s.options[s.selectedIndex].text;
+    var kommunkod = '';
+    for (var i = 0; i < data2.length; i++) {
+        if (data2[i].Namn === text){
+            kommunkod = data2[i].Kommunkod;
+        }
+    }
+        if (kommunkod === null || kommunkod === "") {
+            console.log("Error");
+            divContainer.innerHTML = "";
+
+            warningMsg.style.color = 'red';
+            var orig = select.style.backgroundColor;
+            select.style.backgroundColor = 'orange';
+            setTimeout(function(){
+                warningMsg.style.color = 'transparent';
+                 select.style.backgroundColor = orig;
+            }, 2000);
+         
+            
+        }else{
+
+         fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/' + kommunkod)
+        .then(response => response.text())
+        .then(data => {
+        var obj = JSON.parse(data);
+
         var data2 = obj.Skolenheter;
         
         var col = [];
@@ -44,7 +93,6 @@ console.log(data);
         }
 
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        var divContainer = document.getElementById("placeHolder");
         divContainer.innerHTML = "";
         divContainer.appendChild(table);
 
@@ -55,7 +103,8 @@ console.log(data);
             console.log('JSON fetched');
 
     })
+
 }
 
-    
+}
 

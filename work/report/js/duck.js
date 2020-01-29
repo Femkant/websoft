@@ -3,7 +3,11 @@
 var element = document.getElementById("duck");
 var duckState = true;
 var counter = 0;
+if (JSON.parse(localStorage.getItem('counter') != null)){
 counter = JSON.parse(localStorage.getItem('counter'));
+}else {
+    counter = 0;
+}
 var score = document.getElementById("score");
 score.textContent = "Ducks shot: " + counter;
 
