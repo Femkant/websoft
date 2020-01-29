@@ -37,6 +37,7 @@ body {
 
 .buttons {
     /* background styles */
+    cursor: pointer;
     min-width: 100px;
     position: relative;
     display: inline-block;
@@ -72,6 +73,7 @@ body {
 
 .buttons2 {
     /* background styles */
+    cursor: pointer;
     min-width: 50px;
     position: relative;
     display: inline-block;
@@ -128,5 +130,17 @@ top: 5%;
 
 }
 
+.selectPos {
+max-width: 250px;
+display: inline-block;
+position: absolute;
+left: 80%;
+top: 30%;
+}
+
+#municipality {
+    border: 1px solid white;
+    border-radius: 5px;
+}
 
 

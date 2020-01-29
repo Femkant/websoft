@@ -47,16 +47,17 @@
         </div>
     </div>
     </header>
-    <div id="duck" class="duck"></div>
+
 
     <div class="linkContainer">
-        <button onclick="toggleFrance()" class="c1">France</button>
-        <button onclick="toggleItaly()" class="c2">Italy</button onclick="toggleFrance">
-        <button onclick="toggleGermany()" class="c3">Germany</button onclick="toggleFrance">
+        <button id="swedenID" onclick="toggleSweden()" class="c1">Sweden</button>
+        <button id="italyID" onclick="toggleItaly()" class="c2">Italy</button>
+        <button id="germanyID" onclick="toggleGermany()" class="c3">Germany</button>
     </div>
-    <div class="flag" id="flagContainer"></div>
-        
 
+    <div class="flag" id="flagContainer" onclick="hide()"></div>
+
+    <div id="duck" class="duck"></div>
     <footer>
         <hr>
         <p>Oskar Karström, software developer.</p>

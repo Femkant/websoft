@@ -4,9 +4,8 @@
 margin-top: 10px;
 margin-bottom: 100px;
 height:  500px;
-border: 1px solid black;
 transform: skew(10deg);
-
+cursor: pointer;
 }
 
 .linkContainer {
@@ -31,39 +30,59 @@ transform: skew(10deg);
     background-color: transparent;
 }
 
-.france {
-	background: -webkit-linear-gradient(left, blue 33%, white 33%, white 66%, red 66%);
-
-}
-
 .italy {
     background: -webkit-linear-gradient(left, green 33%, white 33%, white 66%, red 66%);
+    transition: ease;
+    transition-duration: 2s;
+    opacity: 100%;
 }
 
 .germany {
     background: -webkit-linear-gradient(top, black 33%, red 33%, red 66%, yellow 66%);
+    transition: ease;
+    transition-duration: 2s;
+    opacity: 100%;
 }
 
-
-.flag {
+.sweden {
     background: blue;
-
     position: relative;
+    transition: ease;
+    transition-duration: 2s;
+    opacity: 100%;
   }
-  .flag:before, .flag:after {
+  .sweden:before, .sweden:after {
     position: absolute;
     background: yellow;
     content: "";
   }
-  .flag:before {
+  .sweden:before {
     width: 100%;
     height: 40px;
     top: 40%;
     left: 0;
   }
-  .flag:after {
+  .sweden:after {
     width: 40px;
     height: 100%;
     top: 0;
     left: 40%;
+  }
+
+  .buttonNoColor {
+    background-color: transparent;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+
+  .buttonColor {
+    background-color: lightgreen;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+
+  .hide {
+    transition: ease;
+    transition-duration: 2s;
+    opacity: 0%;
   }

@@ -47,11 +47,19 @@
     </div>
     </header>
 
-    <button onclick="runFetch()" class="buttons" style="margin-top:50px; min-width: 120px; min-height: 60px;">Fetch data</button>
+    <button onclick="runFetchMunicipality()" class="buttons" style="margin-top:50px; min-width: 120px; min-height: 60px;">Fetch data</button>
 
     <div id="duck" class="duck"></div>
     <div id="placeHolder"></div>
-        
+
+    
+    <div class="selectPos">
+    <select id="municipality">
+        <option selected value="white">Select Municipality</option>
+        <option value="red">Red</option>
+
+        </select>
+    </div>
 
     <footer>
         <hr>
@@ -60,7 +68,8 @@
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/duck.js"></script>
-    <script src="js/schools.js"></script>
+    <script type="text/javascript" src="js/schools.js"></script>
+    <script type="text/javascript" src="js/municipality.js"></script>
 </div id="bg" style="text-align: center;">
 </body>
 
