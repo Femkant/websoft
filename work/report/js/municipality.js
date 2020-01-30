@@ -7,13 +7,21 @@
 
 (function runFetchMunicipality () {
     'use strict';
-
-        fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun')
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = 'https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun'
+fetch(proxyUrl + targetUrl)
+  //.then(blob => blob.json())
+  
+        /* fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun', {
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }) */
         
     //fetch('data/kommun.json')
     .then(response => response.text()) 
     .then(data => { 
-
         var obj = JSON.parse(data);
         data2 = obj.Kommuner;
 
@@ -51,8 +59,10 @@ function fetchData() {
          
             
         }else{
-
-         fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/' + kommunkod)
+            var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+            targetUrl = 'https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun'
+        fetch(proxyUrl + targetUrl + '/' + kommunkod)
+         //fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/' + kommunkod)
         .then(response => response.text())
         .then(data => {
         var obj = JSON.parse(data);
