@@ -60,8 +60,8 @@ function fetchData() {
             
         }else{
             var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl = 'https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun'
-        fetch(proxyUrl + targetUrl + '/' + kommunkod)
+            targetUrl = 'https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/' + kommunkod;
+        fetch(proxyUrl + targetUrl)
          //fetch('https://api.scb.se/UF0109/v2/skolenhetsregister/sv/kommun/' + kommunkod)
         .then(response => response.text())
         .then(data => {
