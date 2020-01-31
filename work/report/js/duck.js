@@ -11,19 +11,21 @@ if (JSON.parse(localStorage.getItem('counter') != null)) {
 var score = document.getElementById("score");
 score.textContent = "Ducks shot: " + counter;
 
+var interval = 2000;
+if (counter >= 10 && counter < 20) {
+    interval = 1500;
+} else if (counter >= 20 && counter < 30) {
+    interval = 1250;
+} else if (counter >= 30) {
+    interval = 1000;
+}
+
+
 (function () {
     element.style.position = 'absolute';
     element.style.top = Math.floor(Math.random() * 90 + 5) + '%';
     element.style.left = Math.floor(Math.random() * 90 + 5) + '%';
 
-    var interval = 2000;
-    if (counter >= 10 && counter < 20) {
-        interval = 1500;
-    } else if (counter >= 20 && counter < 30) {
-        interval = 1000;
-    } else if (counter >= 30) {
-        interval = 700;
-    }
 
     window.setInterval(switchPos, interval);
 
