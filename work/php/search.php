@@ -57,7 +57,8 @@ EOD;
 </form>
 
 <?php if ($search) : ?>
-    <table>
+    <div class="cent">
+    <table cellpadding="5" border="1" style="border-collapse: collapse;">
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -73,6 +74,7 @@ EOD;
     <?php endforeach; ?>
 
     </table>
+    </div>
 <?php endif; ?>
 
 

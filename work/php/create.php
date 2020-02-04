@@ -65,7 +65,8 @@ if ($create) {
 </form>
 
 <?php if ($res ?? null) : ?>
-    <table>
+    <div class="cent">
+    <table cellpadding="5" border="1" style="border-collapse: collapse;">
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -81,6 +82,7 @@ if ($create) {
     <?php endforeach; ?>
 
     </table>
+    </div>
 <?php endif; ?>
 
 

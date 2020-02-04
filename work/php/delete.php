@@ -97,7 +97,8 @@ if ($delete) {
 
 
 <?php if ($res1 ?? null) : ?>
-    <table>
+    <div class="cent">
+    <table cellpadding="5" border="1" style="border-collapse: collapse;">
         <tr>
             <th>ID</th>
             <th>Label</th>
@@ -113,6 +114,7 @@ if ($delete) {
     <?php endforeach; ?>
 
     </table>
+    </div>
 <?php endif; ?>
 
 <div id="duck" class="duck"></div>

@@ -57,48 +57,47 @@ if ($save) {
     </header>
 
 <h1>Update a row in the table</h1>
+    <form>
+        <select name="item" onchange="this.form.submit()">
+            <option value="-1">Select item</option>
+            <?php foreach ($res1 as $row) : ?>
+                <option value="<?= $row["id"] ?>"><?= "(" . $row["id"]. ") " . $row["name"] ?></option>
+                <?php endforeach; ?>
+            </select>
+        </form>
 
-<form>
-    <select name="item" onchange="this.form.submit()">
-        <option value="-1">Select item</option>
-
-        <?php foreach ($res1 as $row) : ?>
-            <option value="<?= $row["id"] ?>"><?= "(" . $row["id"]. ") " . $row["name"] ?></option>
-        <?php endforeach; ?>
-
-    </select>
-</form>
 
 
 <?php if ($res2 ?? null) : ?>
-<form method="post">
-    <fieldset>
-        <legend>Update</legend>
-        <p>
-            <label>Id: 
-                <input type="text" readonly="readonly" name="id" value="<?= $res2["id"] ?>">
-            </label>
-        </p>
-        <p>
-            <label>Label: 
-                <input type="text" name="name" value="<?= $res2["name"] ?>">
-            </label>
-        </p>
-        <p>
-            <label>Type: 
-                <input type="text" name="hobby" value="<?= $res2["hobby"] ?>">
-            </label>
-        </p>
-        <p>
-            <input type="submit" name="save" value="Save">
-        </p>
-    </fieldset>
-</form>
-<?php endif; ?>
-
+        <form method="post">
+            <fieldset>
+                <legend>Update</legend>
+                <p>
+                    <label>Id: 
+                        <input type="text" readonly="readonly" name="id" value="<?= $res2["id"] ?>">
+                    </label>
+                </p>
+                <p>
+                    <label>Label: 
+                        <input type="text" name="name" value="<?= $res2["name"] ?>">
+                    </label>
+                </p>
+                <p>
+                    <label>Type: 
+                        <input type="text" name="hobby" value="<?= $res2["hobby"] ?>">
+                    </label>
+                </p>
+                <p>
+                    <input type="submit" name="save" value="Save">
+                </p>
+            </fieldset>
+        </form>
+        <?php endif; ?>
+        
 
 <?php if ($res1 ?? null) : ?>
-    <table>
+    <div class="cent">
+    <table cellpadding="5" border="1" style="border-collapse: collapse;">
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -114,6 +113,7 @@ if ($save) {
     <?php endforeach; ?>
 
     </table>
+    </div>
 <?php endif; ?>
 
 <div id="duck" class="duck"></div>

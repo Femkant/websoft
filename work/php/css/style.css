@@ -156,3 +156,10 @@ top: 30%;
     right: 0;
 }
 
+.cent {
+    padding: 10px;
+    text-align: left;
+    margin: auto;
+    display: table;
+}
+
