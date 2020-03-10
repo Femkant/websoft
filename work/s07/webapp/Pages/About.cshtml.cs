@@ -6,20 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace myWebApp.Pages
+namespace webapp.Pages
 {
-    public class AboutModel : PageModel
+    public class PrivacyModel : PageModel
     {
-        private readonly ILogger<AboutModel> _logger;
+        private readonly ILogger<PrivacyModel> _logger;
 
-        public AboutModel(ILogger<AboutModel> logger)
+        public PrivacyModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
         }
 
         public void OnGet()
         {
-
         }
     }
 }
