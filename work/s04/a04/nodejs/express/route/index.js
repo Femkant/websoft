@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Add a route for the path /
 router.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Hejsan Svejsan");
 });
 
 // Add a route for the path /about
