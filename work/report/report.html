@@ -63,10 +63,7 @@
                 <div style="margin-top: 10px;"></div>
                 <button class="buttons2" onclick="location.href='schools.html'">Schools</button>
                 <button class="buttons2" onclick="location.href='flags.html'">Flags</button>
-                <button class="buttons2" onclick="location.href='schools.html'">Task 5</button>
-                <button class="buttons2" onclick="location.href='schools.html'">Task 6</button>
-                <button class="buttons2" onclick="location.href='schools.html'">Task 7</button>
-                <button class="buttons2" onclick="location.href='schools.html'">Task 8</button>
+
             </nav>
 
             <div class="duckBtnPos">
@@ -272,7 +269,7 @@
                 <label for="spoiler8">S08</label>
                 <div class="spoiler">
                     <div style="font-style: italic; font-size: large; text-align: center;">2020-03-10</div>
-                    <p>Group members: <a href="https://okarstrom.github.io/websoft/">Oskar Karström</a>, 
+                    <p style="margin-bottom: 0px">Group members: <a href="https://okarstrom.github.io/websoft/">Oskar Karström</a>, 
                         <a href="https://ffredlund.github.io/websoft/">Filip Fredlund</a>, 
                         <a href="https://christianzaar.github.io/websoft/">Christian Zaar</a> 
                         <br>
@@ -285,10 +282,25 @@
                         <a href="https://www.kristianstad.se/">Kristianstad</a>
                         <br>
                         The main thing we noticed when analyzing the data was that when loading any of the three websites without cache, the amount of data 
-                        transferred was significantly higher. As expected, all the loading times were lowered when in cache, but on the smaller websites, the 
+                        transferred was significantly larger. As expected, all the loading times were lowered when in cache, but on the smaller websites, the 
                         difference was very small. On the largest website, <a href="https://www.kristianstad.se/">Kristianstad.se</a>, the time was more than 
-                        halfed.
-
+                        halfed. On Pagespeed, we noticed that both <a href="https://www.hkr.se/">HKR</a> and <a href="https://www.kristianstad.se/">Kristianstad</a> 
+                        had a pretty bad mobile score. <a href="https://okarstrom.github.io/websoft/work/report/me.html">Websoft</a> on the other hand, got 100/100, 
+                        both on mobile and desktop! 
+                        According to pagespeed, some suggestions to improve the speed on the webpage are:
+                        <div style="text-align: left; margin-left: 150px;">
+                        *Compress text
+                        <br>*Remove resources that are blocking the rendering
+                        <br>*Send images in a more modern format
+                        <br>*Remove unused CSS-code
+                        </div>        
+                        When analyzing <a href="https://www.kristianstad.se/">Kristianstad</a> without cache, the most time saving suggestion was to pre-load 
+                        resources. This tells us that caching the website can be the most important performance booster of them all.
+                        <p style="font-style: italic; text-align: center;">
+                            Today I Learned
+                        </p>
+                        We learned about different tools that are used to measure performance on websites. We also learned about the most common problems 
+                        with slow websites.
                     </p>
                 </div>
             </section>
@@ -297,16 +309,7 @@
                 <input type="checkbox" id="spoiler9" />
                 <label for="spoiler9">S09</label>
                 <div class="spoiler">
-                    <div style="font-style: italic; font-size: large; text-align: center;">2020-MM-DD</div>
-                    <p>Here is the text for this section.</p>
-                </div>
-            </section>
-
-            <section>
-                <input type="checkbox" id="spoiler10" />
-                <label for="spoiler10">S10</label>
-                <div class="spoiler">
-                    <div style="font-style: italic; font-size: large; text-align: center;">2020-MM-DD</div>
+                    <div style="font-style: italic; font-size: large; text-align: center;">2020-03-11</div>
                     <p>Here is the text for this section.</p>
                 </div>
             </section>
